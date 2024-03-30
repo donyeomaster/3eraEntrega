@@ -1,0 +1,115 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="../css/bootstrap.min.css">
+
+    <link rel="stylesheet" href="../css/style.css">
+    <title>About Julio Peña</title>
+  </head>
+
+  <body>
+
+    <!-- Inicio del menu -->
+    
+      <nav class="navbar navbar-expand-sm navbar-light ">
+        <div class="container-fluid">
+        <!-- logo -->
+
+        <a class="navbar-brand" href="#">
+          <img src="../images/logoJULIO-FondoB-2.png" alt="logo Julio Peña">
+          
+        </a>
+            
+        <!-- boton del menu -->
+
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#menu" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+
+          <!-- elementos del menu colapsible -->
+
+        <div class="collapse navbar-collapse" id="menu">
+          <ul class="navbar-nav mx-auto">
+            <li class="nav-item">
+              <a class="nav-link" href="../index.html">Home</a>
+            </li>
+            <li class="nav-item">
+              <a  class="nav-link" href="./about.html">About</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="./portfolio.html">Portfolio</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="./skills.html">Skills</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link active" aria-current="page" href="#">Contact</a>
+              </li>
+          </ul>
+          <hr class="d-md-none text-black-50">
+        </div>
+        </div>  
+      </nav>
+      <!-- formulario bootstrap -->
+      <div class="container">
+        <div class="row">
+          <div class="col">
+            <form action="">
+              <div class="row mb-3">
+                <div class="col-12 col-sm-6 mb-3">
+                  <!-- manda el formulario a gmail -->
+                  <form action="https://formsubmit.co/juliopenaobando@gmail.com" method="POST" />
+                  <label for="nombre" class="form-label"> Name</label>
+                  <input type="text" class="form-control" placeholder="Name" id="nombre" name="nombre">
+                </div>
+
+                <div class="col-12 col-sm-6 mb-3">
+                  <label for="correo" class="form-label"> Email</label>
+                  <input type="email" class="form-control" placeholder="email@email.com" id="correo" name="correo">
+                </div>
+              </div>
+
+              <div class="row">
+                <div class="col-12 mb-3">
+                  <label for="subject" class="form-label"> Subject</label>
+                  <input type="text" class="form-control" placeholder="suject" id="subject" name="suject">
+                </div>
+              </div>
+
+              <div class="row">
+                <div class="col-12 mb-3">
+                  <label for="mensaje" class="form-label">Message</label>
+                  <textarea name="mensaje" id="mensaje" name="mensaje" class="form-control"></textarea>
+                </div>
+              </div>
+
+                <div class="row">
+                  <div class="col-12">
+                    <div>
+                      <div class="form-check mb-3">
+                        <input type="checkbox" name="terminos" id="terminos" class="form-check-input">
+                        <label for="terminos" class="form-check-label">Agree to terms and conditions</label>
+                      </div>
+                    </div>
+                    <button type="submit" class="btn btn-outline-dark">Send</button>
+                  </div>
+                </div>
+              
+
+            </form>
+          </div>
+        </div>
+      </div>
+    
+
+    <!-- Bootstrap js -->
+    <script src="../js/bootstrap.bundle.min.js"></script>
+
+
+  </body>
+</html>
