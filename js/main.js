@@ -1,3 +1,4 @@
+// efecto maquina de escribir
 const typed = new Typed('.typed', {
     // strings: [
     //     '<i class="profesion">ICT Teacher</i>', 

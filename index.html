@@ -11,7 +11,7 @@
 
     <link rel="stylesheet" href="./css/style.css">
     <link rel="icon" type="image/png" href="./images/faviconJulio.png">
-    <title>NavBar</title>
+    <title>Julio Enrique Peña</title>
   </head>
 
   <body class="home">
@@ -112,9 +112,17 @@
                 </div>
                 <br>
                 <div class="botonhome">
-                  <button type="submit" class="btn btn-outline-light">Play Video</button>
+                  
+                  <button id="openModalBtn">Play Video</button>
                 </div>
+                
 
+                <div id="modal" class="modal">
+                  <div class="modal-content">
+                    <span class="close">&times;</span>
+                    <iframe id="video" width="560" height="315" src="https://www.youtube.com/embed/h65xRyF75Ps?si=Kgk6hxtMRCtniP2Q" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                  </div>
+                </div>
              
                 
             </div>
@@ -127,5 +135,7 @@
   <!-- texto animado -->
   <script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.11"></script>
   <script src="./js/main.js"></script>
+  <!-- modal -->
+  <script src="./js/modal.js"></script>
   </body>
 </html>
