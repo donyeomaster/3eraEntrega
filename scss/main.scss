@@ -1,23 +1,10 @@
-$font-roboto: 'RobotoR', sans-serif;
-$color-background: rgb(0, 0, 0);
-$color-text-white: rgb(221, 221, 221);
-$color-text-gray: #87898b;
-$color-text-link: rgb(231, 231, 231);
-$color-text-hover: rgb(181, 181, 180);
-$color-button-bg: white;
-$color-button-text: black;
-$color-button-border: black;
-$color-button-hover-bg: black;
-$color-button-hover-border: white;
-$color-button-hover-text: white;
-$color-modal-background: rgba(0, 0, 0, 0.85);
-$color-modal-content-bg: #fefefe;
-$color-modal-content-border: #888;
-$color-modal-close: #aaa;
-$color-modal-close-hover: black;
-$color-gradient-start: rgba(0, 127, 255, 0.3);
-$color-gradient-end: rgb(1, 54, 107);
-
+$font-family: 'RobotoR', sans-serif;
+$primary-color: rgb(0, 0, 0);
+$secondary-color: rgb(221, 221, 221);
+$link-color: rgb(181, 181, 180);
+$modal-bg-color: rgba(0,0,0,0.85);
+$modal-content-bg-color: #fefefe;
+$modal-border-color: #888;
 
 * {
     margin: 0;
@@ -26,28 +13,29 @@ $color-gradient-end: rgb(1, 54, 107);
 }
 
 @font-face {
-    font-family: $font-roboto;
+    font-family: $font-family;
     src: url(../font/Roboto/Roboto-Regular.ttf);
 }
 
+/* home */
 body.home {
-    background-color: $color-background;
+    background-color: $primary-color;
 }
 
 .titblanco {
-    color: $color-text-white;
+    color: $secondary-color;
 }
 
 .typed {
-    color: $color-text-link;
+    color: $secondary-color;
 }
 
 h1, h2, h3, h4, h5, h6 {
-    font-family: $font-roboto;
+    font-family: $font-family;
 }
 
 p, a, span, li, input, button {
-    font-family: $font-roboto;
+    font-family: $font-family;
 }
 
 a:link, a:visited, a:active {
@@ -60,11 +48,10 @@ a:active {
 }
 
 a:hover {
-    color: $color-text-hover;
+    color: $link-color;
 }
 
-.bi-github,
-.bi-whatsapp {
+.bi-github, .bi-whatsapp {
     color: aliceblue;
 }
 
@@ -81,15 +68,15 @@ main .contenedor-img {
 
 .contenedor-texto .profesion {
     font-weight: bold;
-    color: $color-text-gray;
+    color: #87898b;
     font-style: normal;
     text-align: center;
 }
 
 #openModalBtn {
-    background-color: $color-button-bg;
-    color: $color-button-text;
-    border: 2px solid $color-button-border;
+    background-color: white;
+    color: black;
+    border: 2px solid black;
     padding: 10px 20px;
     font-size: 16px;
     cursor: pointer;
@@ -98,13 +85,13 @@ main .contenedor-img {
     border-radius: 10px;
 
     &:hover {
-        background-color: $color-button-hover-bg;
-        border: 2px solid $color-button-hover-border;
-        color: $color-button-hover-text;
+        background-color: black;
+        border: 2px solid rgb(255, 255, 255);
+        color: white;
     }
 }
 
-/* Modal */
+/* modal */
 .modal {
     display: none;
     position: fixed;
@@ -113,45 +100,45 @@ main .contenedor-img {
     top: 0;
     width: 100%;
     height: 100%;
-    background-color: $color-modal-background;
+    background-color: $modal-bg-color;
     overflow: auto;
-}
 
-.modal-content {
-    background-color: $color-modal-content-bg;
-    margin: 10% auto;
-    padding: 20px;
-    border: 1px solid $color-modal-content-border;
-    width: 80%;
-    max-width: 700px;
-}
-
-.close {
-    color: $color-modal-close;
-    float: right;
-    font-size: 28px;
-    font-weight: bold;
-
-    &:hover,
-    &:focus {
-        color: $color-modal-close-hover;
-        text-decoration: none;
-        cursor: pointer;
-    }
-}
-
-/* Media Queries */
-@media only screen and (max-width: 768px) {
     .modal-content {
-        width: 90%;
-        padding: 10px;
-    }
-}
+        background-color: $modal-content-bg-color;
+        margin: 10% auto;
+        padding: 20px;
+        border: 1px solid $modal-border-color;
+        width: 80%;
+        max-width: 700px;
 
-@media only screen and (max-width: 576px) {
-    .modal-content {
-        width: 70%;
-        padding: 10px;
+        .close {
+            color: #aaa;
+            float: right;
+            font-size: 28px;
+            font-weight: bold;
+
+            &:hover,
+            &:focus {
+                color: black;
+                text-decoration: none;
+                cursor: pointer;
+            }
+        }
+    }
+
+    /* Media Queries */
+    @media only screen and (max-width: 768px) {
+        .modal-content {
+            width: 90%;
+            padding: 10px;
+        }
+    }
+
+    @media only screen and (max-width: 576px) {
+        .modal-content {
+            width: 70%;
+            padding: 10px;
+        }
     }
 }
 
@@ -160,5 +147,280 @@ main .contenedor-img {
     height: 380px;
 }
 
+/* about */
+.about {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    padding: 30px;
+}
 
+.item1 {
+    display: flex;
+    justify-content: center;
+    width: 50%;
+}
+
+.item2 {
+    width: 50%;
+    padding: 20px;
+}
+
+.botonhome {
+    text-align: center;
+}
+
+@media(max-width: 768px) {
+    .item1, .item2 {
+        text-align: center;
+        width: 100%;
+    }
+}
+
+.julio-about {
+    max-width: 100%;
+    width: 550px;
+    border-radius: 10px;
+}
+
+/* portfolio */
+.wrapper {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    justify-content: center;
+    width: 100%;
+    position: absolute;
+}
+
+.card {
+    margin: 25px;
+    width: 280px;
+    height: 360px;
+    background: #fff;
+    display: flex;
+    align-items: flex-end;
+    padding: 2rem 1rem;
+    position: relative;
+    transition: 0.5s all ease-in-out;
+    border-radius: 10px;
+    box-shadow: 0 10px 20px rgba(1, 21, 71, 0.2);
+
+    &:hover {
+        transform: translateY(-10px);
+    }
+
+    &::before {
+        content: '';
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        border-radius: 10px;
+        background: linear-gradient(to bottom, rgba(0, 127, 255, 0.3), rgb(1, 54, 107));
+        z-index: 2;
+        opacity: 0;
+        transition: 0.5s all;
+    }
+
+    &:hover::before {
+        opacity: 1;
+    }
+
+    img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        position: absolute;
+        border-radius: 10px;
+        top: 0;
+        left: 0;
+    }
+
+    .info {
+        position: relative;
+        color: #fff;
+        z-index: 3;
+        opacity: 0;
+        transform: translateY(30px);
+        transition: 0.5s all;
+
+        &:hover {
+            opacity: 1;
+            transform: translateY(0);
+        }
+
+        h1 {
+            line-height: 40px;
+            margin-bottom: 10px;
+        }
+
+        p {
+            font-size: 15px;
+            letter-spacing: 1px;
+            margin-bottom: 20px;
+        }
+
+        .btn {
+            background: #fff;
+            padding: 0.5rem 1rem;
+            color: #000;
+            font-size: 12px;
+            cursor: pointer;
+            border-radius: 10px;
+            text-decoration: none;
+            font-weight: bold;
+            transition: .4s ease-in-out;
+
+            &:hover {
+                background: #55cbfa;
+                color: #fff;
+                box-shadow: 0 7px 10px rgba(0, 0, 0, 0.5);
+            }
+        }
+    }
+}
+
+/* skills */
+.contenedor-skills {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    justify-content: center;
+    width: 100%;
+}
+
+.skills {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    backdrop-filter: blur(50px);
+    border-radius: 10px;
+    box-shadow: 0 19px 38px #000, 0 15px 12px #000;
+
+    h3 {
+        font-size: 22px;
+        text-align: left;
+        margin-bottom: -20px;
+        margin-top: 10px;
+        padding-left: 30px;
+    }
+
+    .skills-bar {
+        padding: 25px 30px;
+
+        .bar {
+            margin: 25px 0;
+
+            .info span {
+                font-size: 1rem;
+                font-weight: 600;
+            }
+
+            .info {
+                margin-bottom: 8px;
+                color: #07374a;
+            }
+
+            .progress-line {
+                position: relative;
+                height: 10px;
+                width: 370px;
+                background: #f0f0f0;
+                border-radius: 10px;
+                transform: scaleX(0);
+                transform-origin: left;
+                animation: animate 1s cubic-bezier(1, 0, 0.5, 1) forwards;
+
+                span {
+                    position: absolute;
+                    background: linear-gradient(45deg, #00ffff, #007fff);
+                    height: 100%;
+                    border-radius: 10px;
+                    transform: scaleX(0);
+                    transform-origin: left;
+                    text-transform: uppercase;
+                    animation: animate 1s 1s cubic-bezier(1, 0, 0.5, 1) forwards;
+
+                    &::before {
+                        position: absolute;
+                        content: "";
+                        height: 0;
+                        right: 0;
+                        top: -14px;
+                        width: 0;
+                        border: 7px solid transparent;
+                        border-bottom-width: 0px;
+                        border-right-width: 0px;
+                        border-top-style: #f0f0f0;
+                        border-top-color: #07374a;
+                    }
+
+                    &::after {
+                        position: absolute;
+                        right: 0;
+                        top: -28px;
+                        color: #f0f0f0;
+                        font-size: 12px;
+                        font-weight: 700;
+                        background: #504f4c;
+                        padding: 1px 8px;
+                        border-radius: 3px;
+                    }
+                }
+            }
+        }
+    }
+}
+
+@keyframes animate {
+    100% {
+        transform: scaleX(1);
+    }
+}
+
+/* 2da hilera skill */
+.progress-line {
+    .ps {
+        width: 90%;
+    }
+
+    .pr {
+        width: 70%;
+    }
+
+    .ind {
+        width: 60%;
+    }
+
+    .blender {
+        width: 65%;
+    }
+
+    .cinema {
+        width: 50%;
+    }
+
+    & span::after {
+        content: "90%";
+    }
+
+    .pr::after {
+        content: "70%";
+    }
+
+    .ind::after {
+        content: "60%";
+    }
+
+    .blender::after {
+        content: "65%";
+    }
+
+    .cinema::after {
+        content: "50%";
+    }
+}
 
