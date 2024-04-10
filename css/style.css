@@ -39,9 +39,7 @@ a:link, a:visited, a:active {
     margin-right: 20px;
 }
 
-a:active{
-    font-weight: 600;
-}
+
 
 a:hover{
     color: rgb(181, 181, 180);
